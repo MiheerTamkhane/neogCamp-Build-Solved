@@ -1,0 +1,18 @@
+:root{
+--primary : red;
+--secondary : green;
+}
+
+h1{
+    color: var(--primary);
+}
+h2{
+    color: var(--secondary);
+}
+
+.primary{
+    color: var(--primary);
+}
+.secondary{
+    color: var(--secondary);
+}
