@@ -145,21 +145,21 @@
 
 //Write a program that masks all but last four characters of the string "5565534276455423" to '#';
 
-// console.log(maskOff("5565534276455423"));
-// function maskOff(str) {
-//   let lastFour = str.substr(-4);
-//   //   return lastFour.length;
-//   let firstNums = str.substr(0, str.length - lastFour.length);
-//   //   console.log(firstNums);
-//   return str.replace(firstNums, hashCreate(firstNums));
-// }
-// function hashCreate(firstNums) {
-//   let arr = [];
-//   for (let i = 0; i < firstNums.length; i++) {
-//     arr += "#";
-//   }
-//   return arr;
-// }
+console.log(maskOff("5565534276455423"));
+function maskOff(str) {
+  let lastFour = str.substr(-4);
+  //   return lastFour.length;
+  let firstNums = str.substr(0, str.length - lastFour.length);
+  //   console.log(firstNums);
+  return str.replace(firstNums, hashCreate(firstNums));
+}
+function hashCreate(firstNums) {
+  let arr = [];
+  for (let i = 0; i < firstNums.length; i++) {
+    arr += "#";
+  }
+  return arr;
+}
 
 //Given a string "tic tac toe is a fun game" convert the first 6 characters to capital case.
 
