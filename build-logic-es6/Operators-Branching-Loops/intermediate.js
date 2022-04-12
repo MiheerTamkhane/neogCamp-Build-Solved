@@ -62,6 +62,76 @@ const fibonacci = (n) => {
 console.log(fibonacci(10));
 // 6. Write a program to take an input from a user and find its Factorial. Example: Factorial of 5 is 120
 
+const factorialOfNumber = (num) => {
+  let fact = 1;
+  if (num === 0) return fact;
+  else {
+    for (let i = num; i > 0; i--) {
+      fact *= i;
+    }
+    return fact;
+  }
+};
+// console.log(factorialOfNumber(3));
+
 // 7. Write a Program to take a number input from user and find if the number is Prime or not.
 
+const isPrime = (num) => {
+  if (num === 2) {
+    return true;
+  } else if (num > 1) {
+    for (var i = 2; i < num; i++) {
+      if (num % i !== 0) {
+        return true;
+      } else if (num === i * i) {
+        return false;
+      } else {
+        return false;
+      }
+    }
+  } else {
+    return false;
+  }
+};
+
+console.log(isPrime(5));
+
 // 8. Write a program to take a day as an input and determine whether it is a weekday or weekend. Example: Tuesday is weekday.
+
+const weekDayOrEnd = (day) => {
+  let dayIn = day.toLowerCase();
+
+  switch (dayIn) {
+    case "sunday":
+      return "WeekEnd";
+      break;
+    case "monday":
+      return "WeekDay";
+      break;
+    case "tuesday":
+      return "WeekDay";
+      break;
+    case "wednesday":
+      return "WeekDay";
+      break;
+    case "thursday":
+      return "WeekDay";
+      break;
+    case "friday":
+      return "WeekDay";
+      break;
+    case "saturday":
+      return "WeekEnd";
+      break;
+    default:
+      return "Invalid weekDay";
+      break;
+  }
+};
+console.log(weekDayOrEnd("monday"));
+
+// To get a week day in long form from date object
+// var Xmas95 = new Date("December 25, 1995 23:15:30");
+// var weekday = Xmas95.getDay();
+// var options = { weekday: "long" };
+// console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
